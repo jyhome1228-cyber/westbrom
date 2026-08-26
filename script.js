@@ -1,4 +1,7 @@
 (() => {
+  const hero = document.querySelector('.hero');
+  if (hero) hero.remove();
+
   const links = Array.from(document.querySelectorAll('a[href^="#"]'));
   links.forEach((link) => {
     link.addEventListener('click', (event) => {
