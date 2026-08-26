@@ -152,6 +152,10 @@ p{margin-top:0}
   gap:10px;
   margin-top:40px;
 }
+.hero__actions .button--ghost,
+.hero__actions a[href*="portfolio-west-bromwich-albion"]{
+  display:none!important;
+}
 .button{
   min-height:44px;
   display:inline-flex;
