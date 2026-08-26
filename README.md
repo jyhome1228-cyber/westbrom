@@ -26,3 +26,5 @@ Enable GitHub Pages from the repository `main` branch / root directory.
 Expected Pages URL after publishing:
 
 `https://jyhome1228-cyber.github.io/westbrom/`
+
+<!-- pages-redeploy-trigger: 2026-08-27-001 -->
