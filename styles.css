@@ -360,15 +360,28 @@ p{margin-top:0}
 }
 .feature-image figcaption{color:#b8bfd1}
 
+/* Section 05: give the proposed crest a clear visual pause in the narrative. */
+#colour .copy{max-width:none}
+#colour .copy > p{max-width:760px}
+#colour .copy::after{
+  content:"";
+  display:block;
+  width:100%;
+  aspect-ratio:16/9;
+  margin-top:52px;
+  background:#091453 url('https://cdn.imweb.me/upload/S202410251a294b3f442b0/6cfe41ee066de.jpg') center/cover no-repeat;
+}
+
+/* All image groups after the opening 3-up transition use a single-column editorial flow. */
 .two-image-grid{
   display:grid;
-  grid-template-columns:repeat(2,minmax(0,1fr));
-  gap:22px;
+  grid-template-columns:1fr;
+  gap:28px;
   margin-top:64px;
 }
 .two-image-grid img{
   width:100%;
-  aspect-ratio:16/10;
+  aspect-ratio:16/9;
   object-fit:cover;
 }
 .role-grid{margin-top:72px}
@@ -400,16 +413,16 @@ p{margin-top:0}
 }
 .media-stack{
   display:grid;
-  grid-template-columns:repeat(2,minmax(0,1fr));
-  gap:22px;
+  grid-template-columns:1fr;
+  gap:28px;
 }
 .media-stack img{
   width:100%;
-  aspect-ratio:16/9;
+  aspect-ratio:auto;
   object-fit:cover;
   background:#eee;
 }
-.media-stack img:nth-child(3n){grid-column:1/-1}
+.media-stack img:nth-child(3n){grid-column:auto}
 
 .signature{
   display:flex;
@@ -550,14 +563,12 @@ p{margin-top:0}
   .origin-grid strong,.heritage-grid h3,.principles-grid h3,.role-grid h3{margin-top:26px}
   .pull-quote{margin-top:52px;padding:30px 0}
 
-  .transition-grid,.two-image-grid,.media-stack{
-    grid-template-columns:1fr;
-    gap:18px;
-  }
-  .transition-grid{margin-top:48px}
+  .transition-grid{grid-template-columns:1fr;gap:18px;margin-top:48px}
   .transition-grid img{aspect-ratio:4/3}
   .feature-image{margin-top:48px}
   .feature-image img{aspect-ratio:4/3}
+  #colour .copy::after{aspect-ratio:4/3;margin-top:40px}
+  .two-image-grid,.media-stack{grid-template-columns:1fr;gap:18px}
   .two-image-grid{margin-top:48px}
   .two-image-grid img{aspect-ratio:4/3}
   .role-grid{margin-top:52px}
@@ -570,7 +581,7 @@ p{margin-top:0}
     gap:6px;
     margin-bottom:16px;
   }
-  .media-stack img,.media-stack img:nth-child(3n){grid-column:auto;aspect-ratio:4/3}
+  .media-stack img,.media-stack img:nth-child(3n){grid-column:auto;aspect-ratio:auto}
 
   .signature{
     align-items:flex-start;
